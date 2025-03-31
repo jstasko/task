@@ -45,6 +45,18 @@ This uses:
 
 ---
 
+## 🐳 Running from Docker Hub
+Once the image is pushed to Docker Hub, you can run it anywhere:
+
+### 🧲 Pull the image
+```bash
+docker pull <your-dockerhub-username>/<image-name>:latest
+```
+
+### ▶️ Run the image
+```bash
+docker run --rm <your-dockerhub-username>/<image-name>:latest
+
 ## 🧪 Running Tests
 ```bash
 mvn test
@@ -90,8 +102,12 @@ In your repo settings → **Secrets and variables → Actions**, add:
 - `DOCKER_USERNAME`: your Docker Hub username
 - `DOCKER_TOKEN`: your Docker Hub access token (created at https://hub.docker.com/settings/security)
 
+
+
 ### ▶️ How to trigger the workflow
 Go to your GitHub repo → **Actions tab** → select "Build and Push Docker Image" → click **Run workflow**.
+
+
 
 ## 🛠 Structure Overview
 ```
