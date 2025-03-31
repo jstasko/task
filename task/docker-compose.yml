@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  task-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: task-app
+    environment:
+      - JAVA_OPTS=
+    volumes:
+      - ./src/main/resources/app.properties:/app/app.properties
+      - ./src/main/resources/init.sql:/app/init.sql
+      - task-db-data:/app/data
+    ports:
+      - "8080:8080"
+    command: ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
+
+volumes:
+  task-db-data:
