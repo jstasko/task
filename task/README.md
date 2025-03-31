@@ -79,6 +79,20 @@ PRINT_ALL
 
 ---
 
+### 📄 Workflow location
+Save this file as:
+```bash
+.github/workflows/docker-publish.yml
+```
+
+### 🔐 Required GitHub Secrets
+In your repo settings → **Secrets and variables → Actions**, add:
+- `DOCKER_USERNAME`: your Docker Hub username
+- `DOCKER_TOKEN`: your Docker Hub access token (created at https://hub.docker.com/settings/security)
+
+### ▶️ How to trigger the workflow
+Go to your GitHub repo → **Actions tab** → select "Build and Push Docker Image" → click **Run workflow**.
+
 ## 🛠 Structure Overview
 ```
 ├── Main.java
